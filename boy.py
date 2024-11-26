@@ -233,8 +233,6 @@ class Boy:
         self.state_machine.handle_event(('INPUT', event))
 
     def draw(self):
-        self.image.clip_draw(int(self.frame) * 100, self.action * 100, 100, 100, self.x, self.y)
-        self.font.draw(int(self.x - 100), int(self.y + 60), f'({self.x:5.5}, {self.y:5.5})', (255, 255, 0))
         # sx, sy = get_canvas_width() // 2, get_canvas_height() // 2
         sx = self.x - server.background.window_left
         sy = self.y - server.background.window_bottom
